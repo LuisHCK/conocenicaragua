@@ -10,13 +10,20 @@
   }
   .activity-card {
     img {
-      max-height: 200px;
+      height: 200px;
+      width: 100%;
     }
     p {
       margin-bottom: 0;
     }
     span.title {
       font-weight: bold;
+    }
+    .body-card {
+      padding: 14px
+    }
+    .el-button.details {
+      float: right
     }
   }
   .toolbar {
