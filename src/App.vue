@@ -99,4 +99,8 @@ button.icon-btn {
 .el-tabs__nav-wrap {
   text-align: center;
 }
+
+.text-muted {
+  color: grey;
+}
 </style>

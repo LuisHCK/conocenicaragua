@@ -27,7 +27,7 @@
               <departament-info-partial :departament="departament"></departament-info-partial>
             </el-tab-pane>
             <el-tab-pane label="Lugares">
-              Lugares
+              <departament-places :departament="departament"></departament-places>
             </el-tab-pane>
             <el-tab-pane label="Galería">
               Galery
@@ -44,8 +44,12 @@
 
 <script>
 import DepartamentInfo from './partials/departament-page/DepartamentInfo.vue'
+import DepartamentPlaces from './partials/departament-page/DepartamentPlaces.vue'
 export default {
-  components: { 'departament-info-partial': DepartamentInfo },
+  components: {
+    'departament-info-partial': DepartamentInfo,
+    'departament-places': DepartamentPlaces
+  },
   data() {
     return {
       departament: {
@@ -84,6 +88,15 @@ export default {
             short_desc:
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             image: require('../assets/img/default-2.jpg')
+          }
+        ],
+        places: [
+          {
+            id: 1,
+            name: 'Las Brasas',
+            category: 'Restaurante',
+            cover: require('../assets/img/default.jpg'),
+            rating: 5
           }
         ]
       }
