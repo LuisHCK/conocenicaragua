@@ -30,7 +30,7 @@
               <departament-places :departament="departament"></departament-places>
             </el-tab-pane>
             <el-tab-pane label="Galería">
-              Galery
+              <departament-galleries :galleries="departament.galleries"></departament-galleries>
             </el-tab-pane>
             <el-tab-pane label="Comentarios">
               Reviews
@@ -45,10 +45,12 @@
 <script>
 import DepartamentInfo from './partials/departament-page/DepartamentInfo.vue'
 import DepartamentPlaces from './partials/departament-page/DepartamentPlaces.vue'
+import DepartamentGalleries from './partials/departament-page/DepartamentGalleries.vue'
 export default {
   components: {
     'departament-info-partial': DepartamentInfo,
-    'departament-places': DepartamentPlaces
+    'departament-places': DepartamentPlaces,
+    'departament-galleries': DepartamentGalleries
   },
   data() {
     return {
@@ -146,6 +148,13 @@ export default {
                 }
               ]
             }
+          }
+        ],
+        galleries: [
+          {
+            title: 'Eventos',
+            picture: require('../assets/img/default.jpg'),
+            short_desc: 'Aventos realizados en abril'
           }
         ]
       }
