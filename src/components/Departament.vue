@@ -96,7 +96,56 @@ export default {
             name: 'Las Brasas',
             category: 'Restaurante',
             cover: require('../assets/img/default.jpg'),
-            rating: 5
+            rating: 5,
+            schedule: {
+              all: { open_at: '6am', close_at: '11pm' }
+            }
+          },
+          {
+            id: 2,
+            name: 'Las Fonda',
+            category: 'Bar',
+            cover: require('../assets/img/default-2.jpg'),
+            rating: 4.2,
+            schedule: {
+              days: [
+                {
+                  name: 'lunes',
+                  open_at: '6am',
+                  close_at: '11pm'
+                },
+                {
+                  name: 'martes',
+                  open_at: '6am',
+                  close_at: '11pm'
+                },
+                {
+                  name: 'miercoles',
+                  open_at: '6am',
+                  close_at: '11pm'
+                },
+                {
+                  name: 'jueves',
+                  open_at: '6am',
+                  close_at: '11pm'
+                },
+                {
+                  name: 'viernes',
+                  open_at: '6am',
+                  close_at: '11pm'
+                },
+                {
+                  name: 'sabado',
+                  open_at: '11am',
+                  close_at: '11pm'
+                },
+                {
+                  name: 'domingo',
+                  open_at: '11am',
+                  close_at: '11pm'
+                }
+              ]
+            }
           }
         ]
       }
