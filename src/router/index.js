@@ -4,6 +4,7 @@ import Welcome from '@/components/Welcome'
 import Session from '@/components/Session'
 import Departaments from '@/components/Departaments'
 import Departament from '@/components/Departament'
+import Place from '@/components/Place'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/departaments/:name',
       name: 'Departament',
       component: Departament
+    },
+    {
+      path: '/place/',
+      name: 'Place',
+      component: Place
     }
   ]
 })

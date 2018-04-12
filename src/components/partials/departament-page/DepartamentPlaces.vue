@@ -5,9 +5,9 @@
         <!-- Place card -->
         <el-card class="place-card" :body-style="{ padding: '0px' }">
           <el-card class="activity-card" :body-style="{ padding: '0px' }">
-            <img :src="place.cover" :alt="place.name">
+            <img :src="place.cover" :alt="place.name" @click="showPlace(place.id)">
             <div class="body-card">
-              <h2 class="title">{{ place.name }}</h2>
+              <h3 class="title" @click="showPlace(place.id)">{{ place.name }}</h3>
               <p class="text-muted">{{ place.category }}</p>
               <el-rate v-model="place.rating" disabled text-color="#ff9900">
               </el-rate>
@@ -25,7 +25,7 @@
                   </div>
                 </template>
               </p>
-              <el-button class="details" type="text">Ver detalles</el-button>
+              <el-button class="details" type="text" @click="showPlace(place.id)">Ver detalles</el-button>
             </div>
           </el-card>
         </el-card>
@@ -50,17 +50,22 @@ export default {
         return true
       }
       return isToday
+    },
+
+    showPlace(id) {
+      this.$router.push({ name: 'Place', query: { id: id } })
     }
   }
 }
 </script>
 <style lang="scss" scoped>
-h2.title {
+h3.title {
   margin: 0;
 }
 
 img {
   max-height: 150px;
+  cursor: pointer;
 }
 
 p {
