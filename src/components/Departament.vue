@@ -1,6 +1,6 @@
 <template>
   <div id="departament-page">
-    <el-row :gutter="10">
+    <el-row :gutter="10" class="main">
       <el-col class="page-content" :sm="{span: 16, offset: 4}" :md="{span: 12, offset: 6}">
         <div class="header" :style="{ 'background-image': 'url('+ departament.cover +')' }">
           <div class="toolbar">
@@ -96,7 +96,10 @@ export default {
             name: 'Las Brasas',
             category: 'Restaurante',
             cover: require('../assets/img/default.jpg'),
-            rating: 5
+            rating: 5,
+            schedule: {
+              all: { open_at: '6AM', close_at: '11PM' }
+            }
           }
         ]
       }

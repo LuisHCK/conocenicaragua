@@ -9,8 +9,13 @@
             <div class="body-card">
               <h2 class="title">{{ place.name }}</h2>
               <p class="text-muted">{{ place.category }}</p>
-              <el-rate v-model="place.rating" disabled text-color="#ff9900">
-              </el-rate>
+              <el-rate v-model="place.rating" disabled text-color="#ff9900"></el-rate>
+              <div v-if="place.schedule.all" class="text-muted schedule-list">
+                <div>Todos los días: {{ place.schedule.all.open_at }} - {{ place.schedule.all.close_at }}</div>
+              </div>
+              <div v-else>
+                else
+              </div>
               <el-button class="details" type="text">Ver detalles</el-button>
             </div>
           </el-card>
@@ -40,5 +45,9 @@ img {
 
 p {
   margin-top: 2px;
+}
+
+.el-rate {
+  padding: 3px 0 3px;
 }
 </style>
