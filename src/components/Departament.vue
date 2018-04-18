@@ -30,7 +30,7 @@
               <departament-places :departament="departament"></departament-places>
             </el-tab-pane>
             <el-tab-pane label="Galería">
-              Galery
+              <departament-galleries :galleries="departament.galleries"></departament-galleries>
             </el-tab-pane>
             <el-tab-pane label="Comentarios">
               Reviews
@@ -45,10 +45,12 @@
 <script>
 import DepartamentInfo from './partials/departament-page/DepartamentInfo.vue'
 import DepartamentPlaces from './partials/departament-page/DepartamentPlaces.vue'
+import DepartamentGalleries from './partials/departament-page/DepartamentGalleries.vue'
 export default {
   components: {
     'departament-info-partial': DepartamentInfo,
-    'departament-places': DepartamentPlaces
+    'departament-places': DepartamentPlaces,
+    'departament-galleries': DepartamentGalleries
   },
   data() {
     return {
@@ -98,8 +100,61 @@ export default {
             cover: require('../assets/img/default.jpg'),
             rating: 5,
             schedule: {
-              all: { open_at: '6AM', close_at: '11PM' }
+              all: { open_at: '6am', close_at: '11pm' }
             }
+          },
+          {
+            id: 2,
+            name: 'Las Fonda',
+            category: 'Bar',
+            cover: require('../assets/img/default-2.jpg'),
+            rating: 4.2,
+            schedule: {
+              days: [
+                {
+                  name: 'lunes',
+                  open_at: '6am',
+                  close_at: '11pm'
+                },
+                {
+                  name: 'martes',
+                  open_at: '6am',
+                  close_at: '11pm'
+                },
+                {
+                  name: 'miercoles',
+                  open_at: '6am',
+                  close_at: '11pm'
+                },
+                {
+                  name: 'jueves',
+                  open_at: '6am',
+                  close_at: '11pm'
+                },
+                {
+                  name: 'viernes',
+                  open_at: '6am',
+                  close_at: '11pm'
+                },
+                {
+                  name: 'sabado',
+                  open_at: '11am',
+                  close_at: '11pm'
+                },
+                {
+                  name: 'domingo',
+                  open_at: '11am',
+                  close_at: '11pm'
+                }
+              ]
+            }
+          }
+        ],
+        galleries: [
+          {
+            title: 'Eventos',
+            picture: require('../assets/img/default.jpg'),
+            short_desc: 'Aventos realizados en abril'
           }
         ]
       }

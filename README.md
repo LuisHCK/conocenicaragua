@@ -1,4 +1,4 @@
-# conocenic-pwa
+# ConoceNicaragua - Progresive Web App
 
 > La mejor forma de conocer Nicaragua
 
